@@ -14,6 +14,7 @@
                 <ul>
                     <li><router-link to="/dashboard">Inicio</router-link></li>
                     <li><router-link to="/users">Usuarios</router-link></li>
+                    <li><router-link to="/profiles">Perfil</router-link></li>
                 </ul>
             </aside>
             <div class="">
@@ -76,6 +77,7 @@ export default {
     width: 200px;
     background-color: #e0dcdc;
     padding: 1em;
+    font-size: 1.2rem;
 }
 
 .dashboard-sidebar ul {
@@ -85,6 +87,10 @@ export default {
 
 .dashboard-sidebar ul li {
     margin-bottom: 1em;
+}
+
+.dashboard-sidebar ul li:hover {
+  background-color: #bdbaba;
 }
 
 .dashboard-sidebar ul li a {

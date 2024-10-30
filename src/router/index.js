@@ -3,7 +3,7 @@ import Login from '@/components/auth/Login.vue';
 import Register from '@/components/auth/Register.vue';
 import DashBoard from '@/components/dashboard/DashBoard.vue';
 import User from '@/components/Users/User.vue';
-import Profile from '@/components/dashboard/Users.vue';
+import Profile from '@/components/Users/Profile.vue';
 
 const routes = [
     { path: '/', component: Login },
@@ -11,7 +11,7 @@ const routes = [
     { path: '/register', name: 'Register', component: Register },
     { path: '/dashboard', name: 'Dashboard', component: DashBoard },
     { path: '/users', name: 'Users', component: User },
-    { path: '/profile', name: 'Profile', component: Profile },
+    { path: '/profiles', name: 'Profile', component: Profile },
 ];
 
 const router = createRouter({

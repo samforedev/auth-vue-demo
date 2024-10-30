@@ -1,22 +1,5 @@
-<script>
-
-export default {
-  name: "UserView",
-  components:{
-
-  },
-  data() {
-    return {
-      nombre: '',
-      apellido: '',
-      direccion: '',
-      email: ''
-    };
-  }
-};
-</script>
 <template>
-  <div class="animated-background vh-100 d-flex flex-column align-items-center">
+  <dash-board>
     <div class="profile-card shadow-lg p-4 rounded bg-white">
       <div class="banner-image-container">
         <img :src="require('@/assets/styles/Paisaje.jpg')" alt="Mural de fondo" class="banner-image">
@@ -61,40 +44,43 @@ export default {
         <router-link to="/dashboard" class="btn btn-secondary ms-2"><i class="fas fa-times"></i> Cancelar</router-link>
       </div>
     </div>
-  </div>
+  </dash-board>
 </template>
 
+<script>
+
+import DashBoard from "@/components/dashboard/DashBoard.vue";
+
+export default {
+  name: "ProfileView",
+  components:{ DashBoard },
+  data() {
+    return {
+      nombre: '',
+      apellido: '',
+      direccion: '',
+      email: ''
+    };
+  }
+};
+</script>
+
 <style>
-.animated-background {
-  background: linear-gradient(-45deg, #b09aff, #c4f2fa, #c4f0fa, #c4c2fb);
-  background-size: 400% 400%;
-  animation: gradient-animation 10s ease infinite;
+.custom-div {
+  display: flex;
 }
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .bg-white {
   background-color: #59b1a1;
 }
 .wider-card {
-  width: 75%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 1500px;
   background-color: #edc0c0;
 }
 .profile-card {
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 1500px;
   margin: 0 auto;
   padding-top: 150px;
   border-radius: 8px;
