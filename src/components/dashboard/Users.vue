@@ -16,8 +16,18 @@ export default {
 };
 </script>
 <template>
-  <div class="animated-background vh-100 d-flex justify-content-center align-items-center">
-    <div class="shadow-lg p-4 rounded bg-white wider-card">
+  <div class="animated-background vh-100 d-flex flex-column align-items-center">
+    <div class="profile-card shadow-lg p-4 rounded bg-white">
+      <div class="banner-image-container">
+        <img :src="require('@/assets/styles/Paisaje.jpg')" alt="Mural de fondo" class="banner-image">
+      </div>
+      <div class="profile-picture">
+        <img :src="require('@/assets/styles/perro.png')" alt="Foto de perfil" class="rounded-circle profile-img">
+      </div>
+      <h2 class="mt-4">Nombre de Usuario</h2>
+      <p class="text-muted">Breve descripción o cargo</p>
+    </div>
+    <div class="shadow-lg p-4 rounded bg-white wider-card mt-4">
       <h2 class="mb-4 text-center">Edición de perfil</h2>
       <div class="container">
         <div class="row mb-2">
@@ -51,7 +61,6 @@ export default {
         <router-link to="/dashboard" class="btn btn-secondary ms-2"><i class="fas fa-times"></i> Cancelar</router-link>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -79,7 +88,49 @@ export default {
 }
 .wider-card {
   width: 75%;
-  max-width: 1200px;
-  background-color: white;
+  max-width: 700px;
+  background-color: #edc0c0;
+}
+.profile-card {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.banner-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-picture {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-5%);
+  width: 120px;
+  height: 120px;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+h2, p {
+  margin-top: 1rem;
 }
 </style>
