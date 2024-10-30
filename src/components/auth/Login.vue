@@ -2,7 +2,7 @@
     <MainLayout>
         <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="login-form shadow-lg p-4 rounded">
-            <h2 class="mb-4 text-center">Login Demo</h2>
+            <h2 class="mb-4 text-center">Ingresar</h2>
             <form @submit.prevent="handleLogin">
                 <div class="mb-2">
                     <label for="email" class="form-label">Correo Electrónico</label>
@@ -16,7 +16,8 @@
                         placeholder="Ingresa tu contraseña" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Ingresar</button>
+                <button type="submit" class="btn-primary">Ingresar</button>
+                <router-link to="/register"  type="submit" class="btn btn-primary">Registrar</router-link>
             </form>
         </div>
     </div>
@@ -43,7 +44,7 @@ export default {
             try {
                 const data = await this.login({ username: this.username, password: this.password });
                 console.log('Login data:', data);
-                //this.$router.push('/dashboard');
+                this.$router.push('/dashboard');
             } catch (error) {
                 console.log('Login error', error);
             }
@@ -99,7 +100,22 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
+.btn {
+  margin-top: 1em;
+  display: inline-block;
+  align-self: center;
+  width: 100%;
+  background-color: #1033a6;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
 button:hover {
     background-color: #37803b;
 }

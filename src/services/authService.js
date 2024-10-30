@@ -1,7 +1,7 @@
 // src/services/authService.js
 import axios from 'axios';
 
-const API_URL = 'https://584e05c2-c567-4056-8436-800b8fc4ccb6.mock.pstmn.io';
+const API_URL = 'https://05e521f4-a93f-44d4-aaad-e13f4ee4b549.mock.pstmn.io';
 
 const authService = {
     async login(credentials) {

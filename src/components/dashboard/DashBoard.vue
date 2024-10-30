@@ -17,7 +17,7 @@
                     <li><router-link to="/overview">Overview</router-link></li>
                     <li><router-link to="/reports">Reports</router-link></li>
                     <li><router-link to="/analytics">Analytics</router-link></li>
-                    <li><router-link to="/users">Users</router-link></li>
+                    <li><router-link to="/users">Perfil</router-link></li>
                 </ul>
             </aside>
             
@@ -31,10 +31,10 @@
 
 <script>
 export default {
-    name: 'DashboardView', // Cambiado a un nombre de componente de múltiples palabras
+    name: 'DashboardView',
     methods: {
         handleLogout() {
-            console.log('Logout');
+          this.$router.push('/login');
         }
     }
 };
@@ -48,7 +48,7 @@ export default {
 }
 
 .dashboard-header {
-    background-color: #4CAF50;
+    background-color: #4c7eaf;
     color: white;
     padding: 1em;
     display: flex;

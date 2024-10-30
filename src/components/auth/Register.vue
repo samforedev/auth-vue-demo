@@ -2,7 +2,7 @@
     <MainLayout>
         <div class="container d-flex justify-content-center align-items-center vh-100">
             <div class="registration-form shadow-lg p-4 rounded">
-                <h2 class="mb-4 text-center">Register Demo</h2>
+                <h2 class="mb-4 text-center">Registrar</h2>
                 <form @submit.prevent="handleRegister">
                     <div class="mb-2">
                         <label for="email" class="form-label">Correo Electrónico</label>
@@ -22,7 +22,10 @@
                             placeholder="Ingresa tu contraseña" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                    <button type="submit" class="btn-primary">Registrarse</button>
+                  <div>
+                    <router-link to="/login" type="submit" class="btn btn-primary">Volver</router-link>
+                  </div>
                 </form>
             </div>
         </div>
@@ -116,6 +119,22 @@ button {
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+.btn {
+  margin-top: 1em;
+  display: inline-block;
+  align-self: center;
+  width: 100%;
+  background-color: #1033a6;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 button:hover {
