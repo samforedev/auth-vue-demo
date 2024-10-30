@@ -1,30 +1,26 @@
 <template>
     <div class="dashboard">
         <header class="dashboard-header">
-            <h1>Dashboard</h1>
+            <h1>Apliacion Vue - Demo</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#" @click="handleLogout">Logout</a></li>
+                    <li><a href="#" @click="handleLogout">Salir</a></li>
                 </ul>
             </nav>
         </header>
-        
+
         <div class="dashboard-content">
             <aside class="dashboard-sidebar">
                 <ul>
-                    <li><router-link to="/overview">Overview</router-link></li>
-                    <li><router-link to="/reports">Reports</router-link></li>
-                    <li><router-link to="/analytics">Analytics</router-link></li>
-                    <li><router-link to="/users">Perfil</router-link></li>
+                    <li><router-link to="/dashboard">Inicio</router-link></li>
+                    <li><router-link to="/users">Usuarios</router-link></li>
                 </ul>
             </aside>
-            
-            <main class="dashboard-main">
-                <h2>Welcome to the Dashboard</h2>
-                <p>This is your dashboard area where you can view statistics, manage settings, and more.</p>
-            </main>
+            <div class="">
+                <main class="dashboard-main">
+                    <slot></slot>
+                </main>
+            </div>
         </div>
     </div>
 </template>
@@ -34,7 +30,7 @@ export default {
     name: 'DashboardView',
     methods: {
         handleLogout() {
-          this.$router.push('/login');
+            this.$router.push('/login');
         }
     }
 };
@@ -48,7 +44,7 @@ export default {
 }
 
 .dashboard-header {
-    background-color: #4c7eaf;
+    background-color: #4CAF50;
     color: white;
     padding: 1em;
     display: flex;
@@ -78,7 +74,7 @@ export default {
 
 .dashboard-sidebar {
     width: 200px;
-    background-color: #898686;
+    background-color: #e0dcdc;
     padding: 1em;
 }
 
@@ -97,7 +93,6 @@ export default {
 }
 
 .dashboard-main {
-    flex: 1;
     padding: 2em;
     background-color: #fff;
 }
